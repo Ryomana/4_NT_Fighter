@@ -8,9 +8,10 @@ public class player : MonoBehaviour {
 
     [Tooltip("In ms^-1")] [SerializeField] float xSpeed = 20f;
     [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 20f;
-    [SerializeField] float positionPitchFactor = 5f;
+    [SerializeField] float positionPitchFactor = 10f;
     [SerializeField] float controlPitchFactor = 30f;
     [SerializeField] float positionYawFactor = 6.5f;
+    [SerializeField] float positionRollFactor = 10f;
     [SerializeField] float controlRollFactor = -30f;
     [SerializeField] float xRange = 5f;
     [SerializeField] float yRange = 2.5f;
@@ -45,7 +46,10 @@ public class player : MonoBehaviour {
     {
         float pitch = transform.localPosition.y * positionPitchFactor + yThrow * controlPitchFactor;
         float yaw = transform.localPosition.x * positionYawFactor;
-        float roll = xThrow * controlRollFactor;
+
+        float yRollRaw = positionRollFactor * transform.localPosition.x; // rotates the ship inwards
+
+        float roll = xThrow * controlRollFactor + yRollRaw;
         transform.localRotation = Quaternion.Euler(-pitch, yaw, roll);
     }
 }

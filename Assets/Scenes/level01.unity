@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuit: {fileID: 488045303}
-  lookAheadForTargetOffset: 5
+  lookAheadForTargetOffset: 2
   lookAheadForTargetFactor: 0.1
   lookAheadForSpeedOffset: 3
   lookAheadForSpeedFactor: 0.1
@@ -268,7 +268,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 80
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -589,31 +589,57 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4493793476492632, guid: 1bf322e5e00a77a47aa5224ee0d0a33b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4493793476492632, guid: 1bf322e5e00a77a47aa5224ee0d0a33b, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4493793476492632, guid: 1bf322e5e00a77a47aa5224ee0d0a33b, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.033029735
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4493793476492632, guid: 1bf322e5e00a77a47aa5224ee0d0a33b, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4493793476492632, guid: 1bf322e5e00a77a47aa5224ee0d0a33b, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.9994544
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493793476492632, guid: 1bf322e5e00a77a47aa5224ee0d0a33b, type: 2}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4493793476492632, guid: 1bf322e5e00a77a47aa5224ee0d0a33b, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 3.7860003
+    - target: {fileID: 114111314902599146, guid: 1bf322e5e00a77a47aa5224ee0d0a33b,
+        type: 2}
+      propertyPath: xRange
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114111314902599146, guid: 1bf322e5e00a77a47aa5224ee0d0a33b,
+        type: 2}
+      propertyPath: yRange
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114111314902599146, guid: 1bf322e5e00a77a47aa5224ee0d0a33b,
+        type: 2}
+      propertyPath: xSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114111314902599146, guid: 1bf322e5e00a77a47aa5224ee0d0a33b,
+        type: 2}
+      propertyPath: ySpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114111314902599146, guid: 1bf322e5e00a77a47aa5224ee0d0a33b,
+        type: 2}
+      propertyPath: positionPitchFactor
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114111314902599146, guid: 1bf322e5e00a77a47aa5224ee0d0a33b,
+        type: 2}
+      propertyPath: positionRollFactor
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bf322e5e00a77a47aa5224ee0d0a33b, type: 2}
@@ -646,35 +672,11 @@ Transform:
   m_Father: {fileID: 488045302}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1625081032 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1670925409213182, guid: 1bf322e5e00a77a47aa5224ee0d0a33b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1411239694}
 --- !u!4 &1625081035 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4493793476492632, guid: 1bf322e5e00a77a47aa5224ee0d0a33b,
     type: 2}
   m_PrefabInternal: {fileID: 1411239694}
---- !u!114 &1625081036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1625081032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2875f3fb56e40bd408a2c799a0aa1679, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xSpeed: 20
-  ySpeed: 20
-  positionPitchFactor: 5
-  controlPitchFactor: 30
-  positionYawFactor: 6.5
-  controlRollFactor: -30
-  xRange: 5
-  yRange: 2.5
 --- !u!1 &1654165260
 GameObject:
   m_ObjectHideFlags: 0
